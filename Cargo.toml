@@ -1,0 +1,21 @@
+[package]
+name = "inetnum"
+version = "0.1.0-dev"
+authors = ["NLnet Labs <routing-team@nlnetlabs.nl>"]
+categories = ["network-programming"]
+description = "Types for IP address prefixes and ASNs."
+documentation = "https://docs.rs/inetnum/"
+repository = "https://github.com/NLnetLabs/inetnum"
+edition = "2021"
+rust-version = "1.71"
+keywords = ["routing", "bgp", "rpki"]
+license = "BSD-3-Clause"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arbitrary   = { version = "1", optional = true, features = ["derive"] }
+serde       = { version = "1.0.165", optional = true, features = ["derive"] }
+
+[dev-dependencies]
+serde_test      = "1"
